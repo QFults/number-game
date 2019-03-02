@@ -20,7 +20,6 @@ const init = _ => {
   resetInfo()
   computer = getComputer()
   gameOver = false
-  console.log(computer)
 }
 
 // resets user variables and dom
@@ -130,24 +129,30 @@ document.onkeyup = ({ key, keyCode }) => {
   switch (keyCode) {
     // when enter key press
     case 13:
-      evaluate()
+      // check to make sure game isn't finished
+      if (!gameOver) {
+        evaluate()
+      }
       break
-      // when backspace key press
+    // when backspace key press
     case 8:
-      removeNum()
+      // check to make sure game isn't finished
+      if (!gameOver) {
+        removeNum()
+      }
       break
-      // when spacebar key press
+    // when spacebar key press
     case 32:
-    // check to make sure game is finished
+      // check to make sure game is finished
       if (gameOver) {
         // reset all values
         init()
       }
       break
-      // any key press
+    // any key press
     default:
-    // check to see if key is num
-      if (keyCode >= 48 && keyCode <= 57) {
+      // check to see if key is num and game isn't finished
+      if (keyCode >= 48 && keyCode <= 57 && !gameOver) {
         // update user number with value
         numUpdate(parseInt(key))
       }
