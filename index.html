@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Numbers Game</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css'>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- title -->
+    <div class="row">
+      <p class="center-align">
+        Numbers Game
+      </p>
+    </div>
+    <!--  -->
+
+    <!-- game description -->
+    <div class="row">
+      <p class="center-align gameMeta">
+        Type a number and hit enter to see if the number you guessed is the same as the one the computer is thinking of!
+        All number will be somewhere within the range of 1-999. Press the backspace key to change a number you already
+        typed.
+      </p>
+    </div>
+    <!--  -->
+
+    <!-- user guess area -->
+    <div class="row">
+      <p class="center-align guess">
+        Your Guess:
+        <span id="num1" class="guess"></span><span id="num2" class="guess"></span><span id="num3"
+          class="guess"></span>
+      </p>
+    </div>
+    <!--  -->
+
+    <!-- guesses remaining area -->
+    <div class="row">
+      <p class="center-align gameMeta">
+        Guesses Left:
+        <span id="guesses" class="gameMeta"></span>
+      </p>
+    </div>
+    <!--  -->
+
+    <!-- guess results area -->
+    <div class="row">
+      <p id="result" class="center-align gameMeta"></p>
+    </div>
+    <!--  -->
+
+    <!-- computer result area -->
+    <div class="row">
+      <p class="center-align">
+        <span id="computer" class="guess"></span>
+      </p>
+    </div>
+    <!--  -->
+
+    <!-- info to restart game area -->
+    <div class="row">
+      <p class="center-align gameMeta" id="info"></p>
+    </div>
+    <!--  -->
+
+  </div>
+  <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
